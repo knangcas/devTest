@@ -26,3 +26,13 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+task runClient(type: JavaExec) {
+    group 'Client'
+
+
+    classpath = sourceSets.main.runtimeClasspath
+
+    mainClass = 'com.example.demo1spring.Demo1springApplication'
+    standardInput = System.in
+}
